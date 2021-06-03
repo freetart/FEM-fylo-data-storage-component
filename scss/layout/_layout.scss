@@ -97,6 +97,36 @@
   }
 }
 
+// footer
+.footer {
+  @include flexCenter;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: color(veryDarkBlue);
+
+  &__heading {
+    @include textStyles;
+    font-size: size(xs);
+    color: color(paleBlue);
+  }
+
+  &__link {
+    @include headingStyles;
+    color: color(gradientRed);
+    outline: 0;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__logo {
+    width: 5rem;
+  }
+}
+
 // preloader
 .preloader {
   position: fixed;
