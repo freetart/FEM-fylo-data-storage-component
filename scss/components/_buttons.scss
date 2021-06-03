@@ -1,0 +1,29 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// data btn
+.data__btn {
+  background-color: color(veryDarkBlue);
+  padding: 1.3rem;
+  border-radius: 1rem;
+  outline: 0;
+  border: 0;
+  margin: 0 0.7rem;
+
+  @include responsive(sm) {
+    margin: 0.5rem 0.7rem;
+  }
+
+  &-icon {
+    color: color(darkBlue);
+    font-size: 2.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    .data__btn-icon {
+      color: color(paleBlue);
+    }
+  }
+}

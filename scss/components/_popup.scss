@@ -1,0 +1,47 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// popup
+.popup {
+  position: absolute;
+  background-color: color(white);
+  display: flex;
+  align-items: center;
+  top: -5rem;
+  right: 3rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+
+  @include responsive(lg) {
+    position: static;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  &__num {
+    @include headingStyles;
+    font-size: size(xxl) + 1rem;
+  }
+
+  &__text {
+    @include headingStyles;
+    font-size: size(xxs);
+    color: color(grayishBlue);
+    margin-left: 1rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -0.5rem;
+    border-width: 1rem;
+    border-style: solid;
+    border-color: color(white) transparent transparent transparent;
+
+    @include responsive(lg) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+// imports
+@use "../abstracts/abstracts" as *;
+
+// data
+.data {
+  background: url("../images/bg-desktop.png") bottom center/cover no-repeat
+    color(veryDarkBlue);
+  height: 100vh;
+  width: 100vw;
+
+  // container styles
+  &__content {
+    @include maxWidthSm;
+    @include sectionSpacing;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: flex-end;
+    gap: 4rem;
+
+    @include responsive(lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__menu {
+    background-color: color(darkBlue);
+    padding: 4rem;
+    border-top-right-radius: 10rem;
+  }
+
+  &__storage {
+    background-color: color(darkBlue);
+    padding: 4rem;
+    border-radius: 1rem;
+    position: relative;
+  }
+
+  &__gbs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // element styles
+  &__logo {
+    width: 15rem;
+    margin-bottom: 4rem;
+  }
+
+  &__desc {
+    @include textStyles;
+    color: color(paleBlue);
+    font-size: size(xs);
+  }
+
+  &__used {
+    @include headingStyles;
+  }
+
+  &__progress-bar {
+    height: 2rem;
+    width: 100%;
+    background-color: color(veryDarkBlue);
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  &__progress-inner {
+    position: relative;
+    height: 2rem;
+    width: 75%;
+    background: linear-gradient(
+      to left,
+      color(gradientRed),
+      color(gradientOrange)
+    );
+    border-radius: 1rem;
+  }
+
+  &__circle {
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: color(paleBlue);
+    border-radius: 50%;
+    top: 0.2rem;
+    right: 0.5rem;
+  }
+
+  &__gb {
+    @include headingStyles;
+    font-size: size(xxs);
+    color: color(paleBlue);
+  }
+}
