@@ -11,6 +11,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="./images/favicon/koala.ico" />
     <link rel="stylesheet" href="./css/main.min.css" />
     <title>Frontend Mentor Fylo Data Storage Component</title>
@@ -19,7 +21,7 @@
     <!-- data -->
     <section class="data">
       <div class="data__content">
-        <div class="data__menu">
+        <div class="data__menu" data-aos="fade-up">
           <img src="./images/logo.svg" alt="logo" class="data__logo" />
           <div class="data__btns">
             <button type="button" class="data__btn">
@@ -33,7 +35,7 @@
             </button>
           </div>
         </div>
-        <div class="data__storage">
+        <div class="data__storage" data-aos="fade-up" data-aos-delay="200">
           <h5 class="data__desc">
             You’ve used <span class="data__used">815 GB</span> of your storage
           </h5>
@@ -54,6 +56,12 @@
         </div>
       </div>
     </section>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ offset: 100, duration: 1000, once: true });
+    </script>
+    <!-- js -->
     <script src="./js/main.js"></script>
   </body>
 </html>
