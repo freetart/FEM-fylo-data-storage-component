@@ -1,2 +1,60 @@
 // imports
 @use "../abstracts/abstracts" as *;
+
+// data btn
+.data__btn {
+  background-color: color(veryDarkBlue);
+  padding: 1.3rem;
+  border-radius: 1rem;
+  outline: 0;
+  border: 0;
+  margin: 0 0.7rem;
+
+  &-icon {
+    color: color(darkBlue);
+    font-size: 2.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover,
+  &:focus {
+    .data__btn-icon {
+      color: color(paleBlue);
+    }
+  }
+}
+
+// popup
+.popup {
+  position: absolute;
+  background-color: color(white);
+  display: flex;
+  align-items: center;
+  top: -5rem;
+  right: 3rem;
+  padding: 1.5rem;
+  border-radius: 2rem;
+
+  &__num {
+    @include headingStyles;
+    font-size: size(xxl) + 1rem;
+  }
+
+  &__text {
+    @include headingStyles;
+    font-size: size(xxs);
+    color: color(grayishBlue);
+    margin-left: 1rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -0.5rem;
+    border-width: 1rem;
+    border-style: solid;
+    border-color: color(white) transparent transparent transparent;
+  }
+}
