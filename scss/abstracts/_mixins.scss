@@ -37,3 +37,18 @@
   max-width: 1000px;
   margin: 0 auto;
 }
+
+// media queries
+@mixin responsive($breakpoint) {
+  @if ($breakpoint == lg) {
+    @media (max-width: 830px) {
+      @content;
+    }
+  }
+
+  @if ($breakpoint == sm) {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+}
